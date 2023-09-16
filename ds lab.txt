@@ -1,0 +1,164 @@
+Q1
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    
+    int array[50],size,i;
+    
+    printf("enter the size of array");
+    
+    scanf("%d",&size);
+    
+    printf("enter the array elements");
+    
+    for(i=0;i<size;i++)
+    {
+        
+        scanf("%d",&array[i]);
+        
+    }
+    
+    for(i=0;i<size;i++)
+    {
+        
+        printf("%d",array[i]);
+        
+    }
+}
+
+Q2:
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    
+    int array[50],size,i,ele,pos;
+    
+    printf("enter the size of array");
+    
+    scanf("%d",&size);
+    
+    printf("enter the array elements");
+    
+    for(i=0;i<size;i++)
+    {
+        
+        scanf("%d",&array[i]);
+        
+    }
+    
+    printf("enter the position of insertion of element in that array");
+    
+    scanf("%d",&pos);
+    
+    printf("enter the element");
+    
+    scanf("%d",&ele);
+    
+    for(i=size-1;i>=pos-1;i--)
+    {
+        
+        array[i+1] = array[i];
+        
+    }
+    
+    array[pos-1] = ele;
+    
+    for(i=0;i<size+1;i++)
+    {
+        
+        printf("%d",array[i]);
+        
+    }
+}
+
+Q 3
+#include<stdio.h>
+#include<conio.h>
+
+
+void main()
+{
+    
+    int array[50],size,i,ele,pos,j;
+    
+    printf("enter the size of array");
+    
+    scanf("%d",&size);
+    
+    printf("enter the sorted array elements");
+    
+    for(i=0;i<size;i++)
+    {
+        
+        scanf("%d",&array[i]);
+        
+    }
+    
+    printf("enter the element to be inserted in that array");
+    
+    scanf("%d",&ele);
+    
+    for(i=0;i<size;i++)
+    {
+        
+        if(array[i]>ele)
+        {
+            for(j = size-1; j>=i ; j--)
+            {
+                
+                array[j+1] = array[j];
+                
+            }
+            
+            
+        }
+        
+    }
+    
+    array[i] = ele;
+    
+    for(i=0;i<size+1;i++)
+    {
+        
+        printf("%d",array[i]);
+        
+    }
+}
+
+Q
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int n,a[50],s,sum=0,i;
+    
+    printf("enter the array size");
+    
+    scanf("%d",&n);
+    
+    printf("enter the array elements");
+    
+    for(i=0;i<n;i++)
+    {
+        
+        scanf("%d",&a[i]);
+        
+    }
+    
+    s = (n*(n+1))/2;
+    
+    for(i=0;i<n-1;i++)
+    {
+        
+        sum = sum + a[i];
+        
+    }
+    
+    printf("Missing element is %d",(s - sum));
+}
+
